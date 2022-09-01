@@ -1,0 +1,34 @@
+{% extends '/index.html'%}
+
+{% block head %}
+<script defer src="../static/js/statistic.js"></script>
+{% endblock %}
+
+{% block statistic %}
+<div id="statistics_json" data-statistics="{{ statistics }}"></div>
+<section class="statistic">
+    <canvas id="myChart" height="200"></canvas>
+    <div class="wrapper-scroll">
+    <table class="table table-sm table-striped-columns tg-scroll" id="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                {% for i in range(45) %}
+                <th scope="col"></th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for round in round_list %}
+            <tr>
+                <th scope="row">{{round}}</th>
+                {% for i in range(45) %}
+                <td></td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</section>
+{% endblock %}

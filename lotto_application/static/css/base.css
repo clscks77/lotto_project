@@ -1,0 +1,62 @@
+body {
+    background-color: #fffbf8;
+}
+header  {
+    padding: 50px 0 50px;
+    background-image: url("../images/header_background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    color: #fffbf8;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    margin: 80px 0px 20px;
+    text-shadow: 2px 2px 6px gray;
+}
+.config {
+    width: 600px;
+    border-radius: 8px;
+    background-color: #fffbf8dd;
+    color: #282828;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+.form-check {
+    margin: 8px 30px 20px 0px;
+}
+.weeks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.statistic {
+    padding: 25px 8vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+table {
+    font-size: 15px;
+    margin: 50px 0px;
+    width: 1% !important;
+}
+canvas {
+    margin-top: 20px;
+}
+.wrapper-scroll{
+    overflow-x:auto;
+}
+.tg-scroll{
+    min-width: 40rem;
+}
