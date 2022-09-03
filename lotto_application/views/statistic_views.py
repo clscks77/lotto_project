@@ -7,7 +7,7 @@ bp = Blueprint('statistic', __name__, url_prefix='/statistic')
 @bp.route('/', methods=['POST'])
 def statistic():
     round_list = []
-    checks_per_round = []
+    checks_per_round = [] # 내림차순 정렬된 checks
 
     recent_round = tools.get_recent_round()
     week_range = int(request.form['week_range'])
@@ -29,5 +29,5 @@ def statistic():
         "count_per_num" : count_per_num,
         "desc_count" : desc_count
     })
-    
+
     return render_template("statistic.html", round_list=round_list, statistics=statistics, checked=checked)
