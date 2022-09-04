@@ -2,36 +2,45 @@
 
 {% block head %}
 <script defer src="../static/js/statistic.js"></script>
+<script defer src="../static/js/panel.js"></script>
 {% endblock %}
 
 {% block statistic %}
 <div id="statistics_json" data-statistics="{{ statistics }}"></div>
+<div class="panel">
+    <div class="panel-btn"></div>
+    <div class="panel-nums"></div>
+</div>
 <section class="statistic">
     <h2>출현 횟수 순서</h2>
     <!-- desc chart -->
     <canvas id="myChart" height="200"></canvas>
     <!-- desc checks table -->
+    <div class="blue_index">
+        <div class="blue"></div>
+        <div>이번주 번호</div>
+    </div>
     <div class="wrapper-scroll">
-    <table class="table table-sm table-striped-columns tg-scroll" id="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                {% for i in range(45) %}
-                <th scope="col"></th>
+        <table class="table table-sm table-striped-columns tg-scroll" id="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    {% for i in range(45) %}
+                    <th scope="col"></th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                {% for round in round_list %}
+                <tr>
+                    <th scope="row">{{round}}</th>
+                    {% for i in range(45) %}
+                    <td></td>
+                    {% endfor %}
+                </tr>
                 {% endfor %}
-            </tr>
-        </thead>
-        <tbody class="table-group-divider">
-            {% for round in round_list %}
-            <tr>
-                <th scope="row">{{round}}</th>
-                {% for i in range(45) %}
-                <td></td>
-                {% endfor %}
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </tbody>
+        </table>
     </div>
     <h2>번호 순서</h2>
     <!-- origin checks table -->

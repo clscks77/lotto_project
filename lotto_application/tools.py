@@ -9,7 +9,7 @@ def get_recent_round():
     """
     now = datetime.now()
     timestamp = now.timestamp()
-    recent_round = (int)(timestamp - 1661633400)//604800 + 1030
+    recent_round = (int)(timestamp - 1661601000)//604800 + 1030
     # 604800 = 일주일에 대한 timestamp 차이
     # 1661633400 = 2022-08-27 20:50:00에 대한 timestamp
     # 1030 = 그때 나온 최신 로또 회차
